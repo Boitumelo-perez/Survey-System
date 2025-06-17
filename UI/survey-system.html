@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="top-nav">
+        <h1>SURVEYS</h1>
+        <div class="menu">
+            <button class="Nav-btn" data-section="Form" onclick="showSection('Form')">FILL OUT SURVEY</button>
+            <button class="Nav-btn" data-section="Results" onclick="showSection('Results')">VIEW SURVEY RESULTS</button>
+        </div>
+    </div>
+
+    <section id="surveyFormSection">
+        <div class="section1">
+            <h4>Person Details:</h4>
+            <form id="surveyForm">
+                <div class="form-group">
+                    <label for="names">Full Names</label>
+                    <input type="text" class="form-control" id="names" name="names" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="dateOfBirth">Date of Birth</label>
+                    <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required>
+                    <span class="error-message" id="dobError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactNumber">Contact Number</label>
+                    <input type="tel" class="form-control" id="contactNumber" name="contactNumber" pattern="0[0-9]{9}"
+                        maxlength="10" required>
+                    <span class="error-message" id="contactError"></span>
+                </div>
+            </form>
+        </div>
+
+        <div class="section2">
+            <h4>What is your favourite food? </h4>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="pizza" name="favouriteFood" value="Pizza">
+                <label class="form-check-label" for="pizza">Pizza</label>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="pasta" name="favouriteFood" value="Pasta">
+                <label class="form-check-label" for="pasta">Pasta</label>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="papwors" name="favouriteFood" value="Pap and Wors">
+                <label class="form-check-label" for="papwors">Pap and Wors</label>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="otherFood" name="favouriteFood" value="Other">
+                <label class="form-check-label" for="otherFood">Other</label>
+            </div>
+            <div id="foodError" class="section-error"></div>
+        </div>
+
+        <div class="section3">
+
+            <h4>Please rate your level of agreement on a scale from 1 to 5, with 1 being "strongly agree" and 5 being
+                "strongly disagree."</h4>
+
+            <table id="ratingTable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Strongly Agree</th>
+                        <th>Agree</th>
+                        <th>Neutral</th>
+                        <th>Disagree</th>
+                        <th>Strongly Disagree</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>I like to watch movies</td>
+                        <td><label class="radio-option"><input type="radio" name="movies"
+                                    value="1"><span></span></label>
+                        </td>
+                        <td><label class="radio-option"><input type="radio" name="movies"
+                                    value="2"><span></span></label>
+                        </td>
+                        <td><label class="radio-option"><input type="radio" name="movies"
+                                    value="3"><span></span></label>
+                        </td>
+                        <td><label class="radio-option"><input type="radio" name="movies"
+                                    value="4"><span></span></label>
+                        </td>
+                        <td><label class="radio-option"><input type="radio" name="movies"
+                                    value="5"><span></span></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>I like to listen to radio</td>
+                        <td><label class="radio-option"><input type="radio" name="radio" value="1"><span></span></label>
+                        </td>
+                        <td><label class="radio-option"><input type="radio" name="radio" value="2"><span></span></label>
+                        </td>
+                        <td><label class="radio-option"><input type="radio" name="radio" value="3"><span></span></label>
+                        </td>
+                        <td><label class="radio-option"><input type="radio" name="radio" value="4"><span></span></label>
+                        </td>
+                        <td><label class="radio-option"><input type="radio" name="radio" value="5"><span></span></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>I like to eat out</td>
+                        <td><label class="radio-option"><input type="radio" name="eat" value="1"><span></span></label>
+                        </td>
+                        <td><label class="radio-option"><input type="radio" name="eat" value="2"><span></span></label>
+                        </td>
+                        <td><label class="radio-option"><input type="radio" name="eat" value="3"><span></span></label>
+                        </td>
+                        <td><label class="radio-option"><input type="radio" name="eat" value="4"><span></span></label>
+                        </td>
+                        <td><label class="radio-option"><input type="radio" name="eat" value="5"><span></span></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>I like to watch TV</td>
+                        <td><label class="radio-option"><input type="radio" name="tv" value="1"><span></span></label>
+                        </td>
+                        <td><label class="radio-option"><input type="radio" name="tv" value="2"><span></span></label>
+                        </td>
+                        <td><label class="radio-option"><input type="radio" name="tv" value="3"><span></span></label>
+                        </td>
+                        <td><label class="radio-option"><input type="radio" name="tv" value="4"><span></span></label>
+                        </td>
+                        <td><label class="radio-option"><input type="radio" name="tv" value="5"><span></span></label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="ratingError" class="section-error"></div>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn" onclick="submitSurvey()">Submit</button>
+
+    </section>
+
+
+
+
+    <section id="surveyResultsSection" style="display: none;">
+        <div class="results">
+
+            <h1 class="Heading">Survey Results</h1>
+
+            <div id="noDataMessage" class="no-data" style="display: none;">
+                No Surveys Available.
+            </div>
+
+            <table id="resultsTable" style="display: none;">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Total number of surveys:</td>
+                        <td id="totalSurveys"></td>
+                    </tr>
+                    <tr>
+                        <td>Average Age:</td>
+                        <td id="avgAge"></td>
+                    </tr>
+                    <tr>
+                        <td>Oldest person who participated in survey:</td>
+                        <td id="maxAge"></td>
+                    </tr>
+                    <tr>
+                        <td>Youngest person who participated in survey:</td>
+                        <td id="minAge"></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>Percentage of people who like Pizza:</td>
+                        <td id="pizzaPct"></td>
+                    </tr>
+                    <tr>
+                        <td>Percentage of people who like Pasta:</td>
+                        <td id="pastaPct"></td>
+                    </tr>
+                    <tr>
+                        <td>Percentage of people who like Pap and Wors: </td>
+                        <td id="papWorsPct"></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>People who like to watch movies: </td>
+                        <td id="moviesAvg"></td>
+                    </tr>
+                    <tr>
+                        <td>People who like to listen to radio: </td>
+                        <td id="radioAvg"></td>
+                    </tr>
+                    <tr>
+                        <td>People who like to eat out: </td>
+                        <td id="eatOutAvg"></td>
+                    </tr>
+                    <tr>
+                        <td>People who like to watch TV: </td>
+                        <td id="tvAvg"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>

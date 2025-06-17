@@ -1,0 +1,256 @@
+.top-nav {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    width: fit-content;
+    gap: 110vh;
+    padding-left: 30px;
+}
+
+.error-message, .section-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.Nav-btn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border: 0px;
+    background-color: #fff;
+}
+
+.menu button.active {
+    color: #007AFF;
+}
+
+.section1 {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    padding-left: 40px;
+    gap: 105px;
+}
+
+.section1 h4 {
+    margin-left: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+    width: 270px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 3px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"] {
+    padding: 8px;
+    border: 1px solid #007AFF;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+
+
+.section2 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 40px;
+    margin-left: 40px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-check input[type="checkbox"] {
+    display: none;
+}
+
+.form-check label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-check label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #007AFF;
+    border-radius: 2.5px;
+    background-color: white;
+}
+
+.form-check input[type="checkbox"]:checked+label::before {
+    background-color: #007bff;
+}
+
+.form-check input[type="checkbox"]:checked+label::after {
+    content: "✔";
+    position: absolute;
+    left: 2px;
+    top: -2px;
+    color: white;
+    font-size: 14px;
+}
+
+.section3 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 40px;
+}
+
+.section3 h4,
+table {
+    margin-left: 40px;
+}
+
+table {
+    width: 70%;
+    min-width: 40%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th:first-child,
+td:first-child {
+    width: auto;
+    min-width: 150px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+th:not(:first-child),
+td:not(:first-child) {
+    width: 16%;
+    text-align: center;
+}
+
+th,
+td {
+    padding: 12px;
+    width: 17%;
+    word-break: break-word;
+    text-align: center;
+    border-bottom: 1px solid #007AFF;
+    border: 1px solid #007AFF;
+}
+
+th {
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+tr {
+    border: 1px solid #007AFF;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.radio-option {
+    cursor: pointer;
+}
+
+.radio-option input {
+    display: none;
+}
+
+.radio-option span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #007AFF;
+    border-radius: 50%;
+    position: relative;
+}
+
+.radio-option input:checked+span {
+    background-color: #007AFF;
+    border-color: #007AFF;
+}
+
+.radio-option input:checked+span::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+}
+
+.submit-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #004cff;
+}
+
+.results {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.results table {
+    width: 65%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.results th, .results td {
+    padding: 12px 15px;
+    text-align: left;
+    border: none;
+}
+
+.results th {
+    background-color: #fff;
+    font-weight: bold;
+
+}
+
+.results tr {
+    border: none;
+}
+
+.results .no-data {
+    text-align: center;
+    padding: 30px;
+    font-style: italic;
+}
